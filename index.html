@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+    <head>
+    <script src="../angular.min.js"></script>
+    <script src="../angular-route.js"></script>
+    <script>
+        var app = angular.module("myapp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.html"
+    })
+    .when("/tomato", {
+        templateUrl : "jslogin.html"
+    })
+    .when("/green", {
+        templateUrl : "green.htm1"
+    })
+    .when("/blue", {
+        templateUrl : "blue.htm"
+    });
+});
+
+    </script>
+    </head>
+<body>
+<div ng-view></div>
+<h1 style="background-color:Tomato;"><a href="#!tomato">Tomato</a></h1>
+<h1 style="background-color:Orange;">Orange</h1>
+<h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+<h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+<h1 style="background-color:Gray;">Gray</h1>
+<h1 style="background-color:SlateBlue;">SlateBlue</h1>
+<h1 style="background-color:Violet;">Violet</h1>
+<h1 style="background-color:LightGray;">LightGray</h1>
+
+</body>
+</html>
